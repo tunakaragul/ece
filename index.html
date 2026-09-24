@@ -151,10 +151,6 @@
         section { padding: 6rem 10%; }
 
         .section-title { text-align: center; margin-bottom: 4rem; }
-        .section-title .eyebrow {
-            display: block; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase;
-            color: var(--primary-color); font-weight: 700; margin-bottom: 0.8rem;
-        }
         .section-title h2 { font-size: 2.5rem; color: var(--text-dark); margin-bottom: 1rem; }
         .section-title .line { width: 70px; height: 3px; background-color: var(--accent-color); margin: 0 auto; }
 
@@ -163,26 +159,23 @@
         .about-text { max-width: 800px; margin: 0 auto; }
         .about-text p { margin-bottom: 1.5rem; text-align: justify; font-size: 1.05rem; }
 
-        /* ---------- DENEYİM ---------- */
+        /* ---------- DENEYİM (görselsiz, iki kart yan yana) ---------- */
         #experience { background-color: var(--secondary-color); }
 
-        .exp-layout { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 4rem; align-items: start; }
-
-        .exp-visual {
-            position: sticky; top: 120px; border-radius: 16px; overflow: hidden; aspect-ratio: 3/4;
-            background: linear-gradient(160deg, var(--primary-color), var(--primary-dark));
-            display: flex; align-items: center; justify-content: center;
+        .exp-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
         }
-        .exp-visual img { width: 100%; height: 100%; object-fit: cover; }
-
-        .exp-cards { display: flex; flex-direction: column; gap: 2rem; }
 
         .exp-card {
             background: var(--white); padding: 2.5rem; border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03); transition: var(--transition);
             border-left: 4px solid var(--primary-color);
+            height: 100%;
         }
-        .exp-card:hover { transform: translateX(6px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
+        .exp-card:hover { transform: translateY(-6px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
         .exp-card h3 { font-size: 1.4rem; margin-bottom: 1.2rem; color: var(--primary-color); display: flex; align-items: center; gap: 10px; }
         .exp-card h3 i { transition: var(--transition); }
         .exp-card:hover h3 i { transform: scale(1.15); color: var(--highlight-red); }
@@ -251,7 +244,6 @@
             .hero-img-wrap { order: -1; }
             .hero-img-frame { max-width: 300px; }
             .exp-layout { grid-template-columns: 1fr; }
-            .exp-visual { position: static; aspect-ratio: 16/9; }
         }
 
         @media (max-width: 768px) {
@@ -309,7 +301,6 @@
     <main id="main-content">
         <section id="about">
             <div class="section-title fade-in">
-                
                 <h2>Hakkımda</h2>
                 <div class="line"></div>
             </div>
@@ -323,39 +314,32 @@
 
         <section id="experience">
             <div class="section-title fade-in">
-                
                 <h2>Akademik Gelişim & Araştırma</h2>
                 <div class="line"></div>
             </div>
             <div class="exp-layout">
-                <div class="exp-visual fade-in">
-                    <!-- GÖRSEL EKLE: istersen buraya bir fotoğraf koyabilirsin, boşsa dekoratif yeşil panel olarak kalır -->
+                <div class="exp-card fade-in">
+                    <h3><i class="fas fa-microscope" aria-hidden="true"></i> Araştırma Projeleri</h3>
+                    <p>Akademik gelişimimi desteklemek amacıyla çeşitli araştırma projelerinde ve gönüllü çalışmalarda bulundum:</p>
+                    <p>Sabancı Üniversitesi Bellek, Dikkat ve Bilişsel Kontrol Laboratuvarı'nda araştırma asistanlığı yaptım.</p>
+                    <p>Hollanda'da Karşılaştırmalı Psikoloji Laboratuvarı (CoPAN) bünyesinde, duygusal taklit ve fizyolojik senkronizasyon üzerine yürütülen projelerde çalıştım.</p>
+                    <p>Yine Sabancı Üniversitesi'nde 3-12 yaş grubundaki çocukların dünyayı nasıl algıladıklarını ve bedensel duyumlarını inceleyen deneysel bir araştırmada yer aldım.</p>
+                    <p>İstanbul Bilgi Üniversitesi'nde ise "Çocuk Anne Baba Gelişim Atölyesi" projesi kapsamında, 5–12 yaş grubu çocuklar ve ebeveynleriyle grup terapileri gerçekleştirdim. Bu çalışmalarda, çocuklarla yapılan psikoterapinin koruyucu etkilerini incelemeye odaklandık.</p>
                 </div>
-                <div class="exp-cards">
-                    <div class="exp-card fade-in">
-                        <h3><i class="fas fa-microscope" aria-hidden="true"></i> Araştırma Projeleri</h3>
-                        <p>Akademik gelişimimi desteklemek amacıyla çeşitli araştırma projelerinde ve gönüllü çalışmalarda bulundum:</p>
-                        <p>Sabancı Üniversitesi Bellek, Dikkat ve Bilişsel Kontrol Laboratuvarı'nda araştırma asistanlığı yaptım.</p>
-                        <p>Hollanda'da Karşılaştırmalı Psikoloji Laboratuvarı (CoPAN) bünyesinde, duygusal taklit ve fizyolojik senkronizasyon üzerine yürütülen projelerde çalıştım.</p>
-                        <p>Yine Sabancı Üniversitesi'nde 3-12 yaş grubundaki çocukların dünyayı nasıl algıladıklarını ve bedensel duyumlarını inceleyen deneysel bir araştırmada yer aldım.</p>
-                        <p>İstanbul Bilgi Üniversitesi'nde ise "Çocuk Anne Baba Gelişim Atölyesi" projesi kapsamında, 5–12 yaş grubu çocuklar ve ebeveynleriyle grup terapileri gerçekleştirdim. Bu çalışmalarda, çocuklarla yapılan psikoterapinin koruyucu etkilerini incelemeye odaklandık.</p>
-                    </div>
-                    <div class="exp-card fade-in">
-                        <h3><i class="fas fa-certificate" aria-hidden="true"></i> Eğitim & Konferanslar</h3>
-                        <p>Mesleki gelişimim boyunca birçok eğitim, program ve konferansa katıldım. Bunlardan bazıları:</p>
-                        <ul>
-                            <li>Duygu Odaklı Çift Terapisi 1. Düzey Eğitimi – Senem Zeytinoğlu Saydam, DOÇAT</li>
-                            <li>"Travma Perspektifinden Psikoterapi Dersleri" – Klinik Psikolog Didem Doğan</li>
-                            <li>"Güvende Olma, Bağlantı ve İnsan Deneyimi" Konferansı – Dr. Stephen Porges, Dr. Sue Carter, Dr. Sonia Gomes (Somatik Deneyimleme Türkiye)</li>
-                        </ul>
-                    </div>
+                <div class="exp-card fade-in">
+                    <h3><i class="fas fa-certificate" aria-hidden="true"></i> Eğitim & Konferanslar</h3>
+                    <p>Mesleki gelişimim boyunca birçok eğitim, program ve konferansa katıldım. Bunlardan bazıları:</p>
+                    <ul>
+                        <li>Duygu Odaklı Çift Terapisi 1. Düzey Eğitimi – Senem Zeytinoğlu Saydam, DOÇAT</li>
+                        <li>"Travma Perspektifinden Psikoterapi Dersleri" – Klinik Psikolog Didem Doğan</li>
+                        <li>"Güvende Olma, Bağlantı ve İnsan Deneyimi" Konferansı – Dr. Stephen Porges, Dr. Sue Carter, Dr. Sonia Gomes (Somatik Deneyimleme Türkiye)</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section id="approach">
             <div class="section-title fade-in">
-                
                 <h2>Çalışma Alanlarım</h2>
                 <div class="line"></div>
             </div>
@@ -377,14 +361,12 @@
 
         <section id="cta-band" class="fade-in">
             <h2>Bana ulaşın</h2>
-            
             <p>Sizi tanımak ve birlikte nasıl ilerleyebileceğimizi konuşmak için iletişime geçebilirsiniz.</p>
             <a href="#contact" class="btn">Randevu Al <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
         </section>
 
         <section id="contact">
             <div class="section-title fade-in">
-                
                 <h2>İletişim</h2>
                 <div class="line"></div>
                 <p style="margin-top: 1rem; color: var(--text-light); font-weight: 300;">Seanslar ve süreç hakkında bilgi almak için bana ulaşabilirsiniz.</p>
